@@ -2,7 +2,8 @@ extends Node # instancia a classe Node2D
 
 var status = 1 #Essa variável muda a movimentação do player 
 var vscore = 0 #Essa variável é a pontuação
-var x = 1.5 #Essa variável muda a velocidade do jogo
+var x = 3.0 #Essa variável muda a velocidade do jogo
+			#Mudei a velocidade
 var y = 1.5 #Essa variável muda a gravidade do jogo
 
 # executa essa função ao carregar o jogo
@@ -22,7 +23,7 @@ func _process(delta):
 			$background.position.x = 600
 			
 		# movimenta as colunas para colisão
-		$columns.position.x -= 2*x #mudei a velocidade
+		$columns.position.x -= 2*x 
 		if ($columns.position.x) < -550:
 			$columns.position.x = rand_range(0, 350) - 50
 			$columns.position.y = rand_range(0, 400) - 200
