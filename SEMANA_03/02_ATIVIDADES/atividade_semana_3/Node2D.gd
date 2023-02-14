@@ -1,7 +1,7 @@
 extends Node2D
 
 var lista
-var insira1
+var insira1 = []
 var texto
 var insira3 
 
@@ -18,5 +18,5 @@ func _on_Texto_pressed():
 	$Texto2.text = "O texto é: " + String(texto)
 
 func _on_Lista_Vzia_pressed():
-	insira1 = str($insira1.text)
-	$Lista_Vazia.text = "A lista é: " + "[" + String(insira1) + "]"
+	insira1.append($insira1.text)
+	$Lista_Vazia.text = "A lista é: " +  String(insira1)
